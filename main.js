@@ -13,6 +13,7 @@ define(function(require, exports, module) {
         PreferencesManager = brackets.getModule("preferences/PreferencesManager"),
         UglifyJS = require("vendor/uglifyjs").UglifyJS,
         CSSMin = require("vendor/cssmin").CSSMin;
+    var Strings = require("strings");
 
     var language = $("#status-language").text(),
         code = "",
@@ -116,8 +117,8 @@ define(function(require, exports, module) {
     var contextMenu = Menus.getContextMenu(Menus.ContextMenuIds.EDITOR_MENU);
     var cmd_min_id = "minifier.min";
     var cmd_auto_id = "minifier.auto";
-    CommandManager.register("Minify", cmd_min_id, compile);
-    CommandManager.register("Minify on Save", cmd_auto_id, function() {
+    CommandManager.register(Strings.MINIFY, cmd_min_id, compile);
+    CommandManager.register(Strings.MINIFY_ON_SAVE, cmd_auto_id, function() {
         this.setChecked(!this.getChecked());
     });
 
