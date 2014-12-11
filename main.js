@@ -13,7 +13,7 @@ define(function(require, exports, module) {
         PreferencesManager = brackets.getModule("preferences/PreferencesManager"),
         UglifyJS = require("vendor/uglifyjs").UglifyJS,
         CSSMin = require("vendor/cssmin").CSSMin;
-    var Strings = require("strings");
+        Strings = require("strings");
 
     var language = $("#status-language").text(),
         code = "",
