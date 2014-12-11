@@ -1,5 +1,4 @@
 define({
-    "MINIFY"      : "Minimizza",
-    "MINIFY_ON_SAVE"     : "Minimizza al Salvataggio",
-    
+    "MINIFY"         : "Minimizza",
+    "MINIFY_ON_SAVE" : "Minimizza al Salvataggio"
 });
